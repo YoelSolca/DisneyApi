@@ -1,15 +1,18 @@
+
+
+
+
+using AutoMapper;
+using DisneyApi.Entities;
+using DisneyApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DisneyApi
 {
@@ -25,6 +28,27 @@ namespace DisneyApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Defino la conexion con la base de datos
+            var connection = Configuration.GetConnectionString("CruzRojaDB");
+            services.AddDbContextPool<Context>(options => options.UseSqlServer(connection));
+            services.AddScoped <IRepository<Personaje>, PersonajeRepository>();
+
+            services.AddControllers(setupAction =>
+            {
+                setupAction.ReturnHttpNotAcceptable = true;
+            })
+
+            .AddNewtonsoftJson(setupAction =>
+                  {
+                      setupAction.SerializerSettings.ContractResolver =
+                          new CamelCasePropertyNamesContractResolver();
+                  });
+
+
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
             services.AddControllers();
         }
 
