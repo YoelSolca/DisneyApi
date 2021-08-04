@@ -5,14 +5,9 @@ using System.Threading.Tasks;
 
 namespace DisneyApi.Models
 {
-    public class PersonajeDto
+    public class PersonajesFilters
     {
-        public int ID { get; set; }
-
-        public string Imagen { get; set; }
-
-   
         public string Nombre { get; set; }
-
+        public string Edad { get; set; }
     }
 }

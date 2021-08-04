@@ -1,4 +1,5 @@
 ﻿using DisneyApi.Models;
+using DisneyApi.Models.PeliculaSerie;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace DisneyApi.Services
         IEnumerable<TEntity> GetList();
 
         IEnumerable<TEntity> GetList(PersonajesFilters personajesFilters);
+
+        IEnumerable<TEntity> GetListP(PeliculaSerieFilters peliculaSerieFilters);
 
         TEntity GetListId(int Id);
 

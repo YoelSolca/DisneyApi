@@ -32,6 +32,7 @@ namespace DisneyApi
             var connection = Configuration.GetConnectionString("CruzRojaDB");
             services.AddDbContextPool<Context>(options => options.UseSqlServer(connection));
             services.AddScoped <IRepository<Personaje>, PersonajeRepository>();
+            services.AddScoped<IRepository<PeliculaSerie>, PeliculaSerieRepository>();
 
             services.AddControllers(setupAction =>
             {

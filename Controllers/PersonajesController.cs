@@ -32,7 +32,7 @@ namespace DisneyApi.Controllers
         }
 
         [HttpGet("{personajeID}")]
-        public ActionResult<Personaje> GetAllPersonajes(int personajeID)
+        public ActionResult<Personaje> GetPersonaje(int personajeID)
         {
             var personajes = _repository.GetListId(personajeID);
 
@@ -47,7 +47,6 @@ namespace DisneyApi.Controllers
         }
 
         [HttpPost]
-
         public ActionResult<PersonajeDto> CreatePersonaje(PersonajeForCreationDto personaje)
         {
             var character = _mapper.Map<Personaje>(personaje);

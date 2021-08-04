@@ -1,5 +1,6 @@
 ﻿using DisneyApi.Entities;
 using DisneyApi.Models;
+using DisneyApi.Models.PeliculaSerie;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -82,6 +83,11 @@ namespace DisneyApi.Services
         public bool save()
         {
             return (_context.SaveChanges() >= 0);
+        }
+
+        public IEnumerable<Personaje> GetListP(PeliculaSerieFilters peliculaSerieFilters)
+        {
+            throw new NotImplementedException();
         }
     }
 }
