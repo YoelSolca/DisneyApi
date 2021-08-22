@@ -25,7 +25,6 @@ namespace DisneyApi.Services
         }
 
 
-
         public IEnumerable<Personaje> GetList(PersonajesFilters personajesFilters)
         {
             if(string.IsNullOrEmpty(personajesFilters.Nombre) && string.IsNullOrEmpty(personajesFilters.Edad))
@@ -46,6 +45,8 @@ namespace DisneyApi.Services
                 personajesFilters.Edad = personajesFilters.Edad.Trim();
                 collection = collection.Where(i => i.Edad == personajesFilters.Edad);
             }
+
+
 
             return collection.ToList();
 

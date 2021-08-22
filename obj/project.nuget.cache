@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EzmhLQNxevEGkLDsI1T7Gq68pa4bsvSWNtB+vLhmHkQrqif7CWUwiRPLPKcsvI+NjH0U1TLYJbmyJ/kAH7V/SQ==",
+  "dgSpecHash": "D3Sf0AvpLHJOUMWEKiyP696Cq8uhlg93yH+WF/F8xiX7DcT9mGPAUnwnyTF/kcHZGE4F/+1Q1ZJeWowocFwo5A==",
   "success": true,
   "projectFilePath": "D:\\DisneyApi\\DisneyApi\\DisneyApi.csproj",
   "expectedPackageFiles": [
@@ -87,6 +87,7 @@
     "C:\\Users\\User\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.linq.dynamic.core\\1.1.2\\system.linq.dynamic.core.1.1.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.linq.queryable\\4.3.0\\system.linq.queryable.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",

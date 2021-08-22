@@ -13,7 +13,6 @@ namespace DisneyApi.Entities
         [Key]
         public int ID { get; set; }
 
-
         public string Imagen { get; set; }
 
         [Required]

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Linq.Dynamic.Core;
 
 namespace DisneyApi.Services
 {
@@ -70,7 +70,7 @@ namespace DisneyApi.Services
 
         public IEnumerable<PeliculaSerie> GetListP(PeliculaSerieFilters peliculaSerieFilters)
         {
-            if (string.IsNullOrEmpty(peliculaSerieFilters.Titulo))
+            if (string.IsNullOrEmpty(peliculaSerieFilters.Titulo) && string.IsNullOrEmpty(peliculaSerieFilters.CampoOrdenar))
             {
                 return GetList();
             }
@@ -84,7 +84,28 @@ namespace DisneyApi.Services
                 collection = collection.Where(i => i.Titulo == peliculaSerieFilters.Titulo);
             }
 
-            return collection.ToList();
+            if (!string.IsNullOrEmpty(peliculaSerieFilters.CampoOrdenar))
+            {
+                var tipoOrden = peliculaSerieFilters.OrdenAscendente ? "ascending" : "descending";
+                collection = collection.OrderBy($"{peliculaSerieFilters.CampoOrdenar} {tipoOrden}");
+                /*if (peliculaSerieFilters.CampoOrdernar == "FechaDeCreacion")
+                {
+                    if (peliculaSerieFilters.OrdenAscendente)
+                    {
+                    collection = collection.OrderBy(x => x.FechaDeCreacion);
+                    }
+                    else
+                    {
+                        collection = collection.OrderByDescending(x => x.FechaDeCreacion);
+
+                    }
+                }*/
+            }
+
+
+
+
+                return collection.ToList();
 
         }
     }
