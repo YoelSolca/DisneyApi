@@ -114,6 +114,21 @@ namespace DisneyApi.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                schema: "dbo",
+                table: "Persona",
+                columns: new[] { "ID", "Edad", "Historia", "Imagen", "Nombre", "Peso" },
+                values: new object[,]
+                {
+                    { 1, "95", "", "https://i.imgur.com/Zgi3edg.png", "Winnie the Pooh", "" },
+                    { 2, "45", "", "https://i.imgur.com/RotLYaI.png", "Rayo McQueen", "" },
+                    { 3, "30", "", "https://i.imgur.com/5M0XxkQ.jpg", "James P. Sullivan", "" },
+                    { 4, "10", "", "https://i.imgur.com/slzDY8A.png", "Dory", "" },
+                    { 5, "18", "", "https://i.imgur.com/t41xOG2.png", "Bolt", "" },
+                    { 6, "7", "", "https://i.imgur.com/LPTOrA1.png", "Pumbaa", "" },
+                    { 7, "28", "", "https://i.imgur.com/MyNomvq.png", "Mike Wazowski", "" }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_PeliculaSerieGenero_FK_GeneroID",
                 schema: "dbo",

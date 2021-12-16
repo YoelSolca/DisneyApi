@@ -116,6 +116,71 @@ namespace DisneyApi.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Persona","dbo");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Edad = "95",
+                            Historia = "",
+                            Imagen = "https://i.imgur.com/Zgi3edg.png",
+                            Nombre = "Winnie the Pooh",
+                            Peso = ""
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Edad = "45",
+                            Historia = "",
+                            Imagen = "https://i.imgur.com/RotLYaI.png",
+                            Nombre = "Rayo McQueen",
+                            Peso = ""
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Edad = "30",
+                            Historia = "",
+                            Imagen = "https://i.imgur.com/5M0XxkQ.jpg",
+                            Nombre = "James P. Sullivan",
+                            Peso = ""
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Edad = "10",
+                            Historia = "",
+                            Imagen = "https://i.imgur.com/slzDY8A.png",
+                            Nombre = "Dory",
+                            Peso = ""
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Edad = "18",
+                            Historia = "",
+                            Imagen = "https://i.imgur.com/t41xOG2.png",
+                            Nombre = "Bolt",
+                            Peso = ""
+                        },
+                        new
+                        {
+                            ID = 6,
+                            Edad = "7",
+                            Historia = "",
+                            Imagen = "https://i.imgur.com/LPTOrA1.png",
+                            Nombre = "Pumbaa",
+                            Peso = ""
+                        },
+                        new
+                        {
+                            ID = 7,
+                            Edad = "28",
+                            Historia = "",
+                            Imagen = "https://i.imgur.com/MyNomvq.png",
+                            Nombre = "Mike Wazowski",
+                            Peso = ""
+                        });
                 });
 
             modelBuilder.Entity("DisneyApi.Entities.PersonajePeliculaSerie", b =>
