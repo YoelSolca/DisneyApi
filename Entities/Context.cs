@@ -89,6 +89,8 @@ namespace DisneyApi.Entities
                        Historia = "",
                    }
             );
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Personaje> Personaje { get; set; }

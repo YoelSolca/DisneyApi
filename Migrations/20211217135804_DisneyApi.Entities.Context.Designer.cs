@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DisneyApi.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20211216171149_DisneyApi.Entities.Context")]
+    [Migration("20211217135804_DisneyApi.Entities.Context")]
     partial class DisneyApiEntitiesContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
